@@ -14,6 +14,11 @@ public class AuthController {
 
     @Autowired
     private UserService userService;
+    
+    @GetMapping("/")
+    public String landing() {
+        return "index";
+    }
 
     @GetMapping("/login")
     public String login() {
